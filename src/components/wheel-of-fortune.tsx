@@ -300,7 +300,7 @@ export default function WheelOfFortune() {
       setIsSpinning(false)
       const segmentAngle = (2 * Math.PI) / prizes.length
       const normalized = newTarget % (2 * Math.PI)
-      let computedIndex = prizes.length - 1 - Math.floor(normalized / segmentAngle)
+      const computedIndex = prizes.length - 1 - Math.floor(normalized / segmentAngle)
       // On s'assure que l'index reste dans [0, prizes.length-1]
       const prizeIndex = Math.max(0, Math.min(prizes.length - 1, computedIndex))
       const prizeWon = prizes[prizeIndex]

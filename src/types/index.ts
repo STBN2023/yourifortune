@@ -1,6 +1,8 @@
 export interface Prize {
     id: number;
+    points: number;
+    color: string;
+    image: string;
     name: string;
-    probability: number;
-    value?: number;
+    rarity?: 'legendary' | 'rare' | 'common';
   }

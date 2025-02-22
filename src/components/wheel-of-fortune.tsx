@@ -333,7 +333,12 @@ export default function WheelOfFortune() {
           <Sparkles className="w-6 h-6 text-yellow-500" />
           <span className="text-lg font-bold">{points} points</span>
         </div>
-        <Button variant="ghost" size="icon" onClick={() => setIsSoundEnabled(!isSoundEnabled)}>
+        <Button 
+          variant="ghost" 
+          size="sm"  // Changé de "icon" à "sm"
+          className="w-10 h-10 p-0"  // Ajout des classes pour garder l'apparence d'icône
+          onClick={() => setIsSoundEnabled(!isSoundEnabled)}
+        >
           {isSoundEnabled ? <Volume2 /> : <VolumeX />}
         </Button>
       </div>
